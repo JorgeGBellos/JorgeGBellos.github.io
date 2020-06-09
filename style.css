@@ -39,7 +39,7 @@ body{
 	box-shadow: var(--shadow);
 	position: fixed;
 	width: 100%;
-	height: 80px;
+	height: 4.167vw;
 	left: 0px;
 	top: 0px;
 	display: flex;
@@ -49,13 +49,13 @@ body{
 }
 
 .navbar .navbar-logo{
-	margin-left: 3rem;
-	width: 129px;
-	height: 38px;
+	margin-left: 2.5vw;
+	width: 6.719vw;
+	height: 1.979vw;
 }
 
 .navbar .navbar-logo:hover{
-	width: 160px;
+	width: 8.333vw;
 	height: auto;
 	transition: width 1s;
 	cursor: pointer;	
@@ -66,15 +66,15 @@ body{
 	list-style-type: none;
 }
 .navbar .navbar-list .navbar-item a{
-	margin-right: 3rem;
-	font-size: 16px;
-	line-height: 20px;
+	margin-right: 2.5vw;
+	font-size: 0.833vw;
+	line-height: 1.042vw;
 	font-weight: bold;
 	text-decoration: none;
 	color: white;
 }
 .navbar .navbar-list .navbar-item a:hover{
-	font-size: 20px;
+	font-size: 1.042vw;
 	transition: font-size 1s;
 }
 
@@ -97,39 +97,32 @@ body{
 	z-index: 1;
 }
 .hero-content .hero-banner-text{
-	max-width: 800px;
+	max-width: 41.667vw;
 	text-align: center;
 }
 
 .hero-content .hero-banner-text h1{
 	font-family: var(--secondary-font);
 	font-weight: bold;
-	font-size: 60px;
-	margin-bottom: 1rem;
-}
-
-.hero-content .hero-banner-text h1{
-	font-family: var(--secondary-font);
-	font-weight: bold;
-	font-size: 80px;
-	margin-bottom: 1rem;
+	font-size: 4.167vw;
+	margin-bottom: 0.833vw;
 }
 
 .hero-content .hero-banner-text > p{
 	font-weight: 300;
-	font-size: 24px;
-	margin-bottom: 2rem;
+	font-size: 1.250vw;
+	margin-bottom: 1.667vw;
 }
 .hero-content .hero-banner-text .button{
-	width: 208px;
-	height: 73px;
+	width: 10.833vw;
+	height: 3.802vw;
 	margin: 0 auto;
  	text-decoration: none;
  	color: white;
  	background: rgba(255, 255, 255, 0.08);
- 	border: 2px solid #FFFFFF;
+ 	border: 0.104vw solid #FFFFFF;
  	text-align: center;
-	border-radius: 50px;
+	border-radius: 2.604vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -137,7 +130,7 @@ body{
 
 .hero-content .hero-banner-text .button p{
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 0.938vw;
 }
 
 .about-us{
@@ -164,6 +157,10 @@ body{
 	margin-top: 8px;
 }
 
+.about-us-content .line{
+	display: none;
+}
+
 .content{
 	display: flex;
 	justify-content: space-around;
@@ -182,6 +179,7 @@ body{
 	background-position: center;
 	background-size: cover;
 }
+
 .content .about-us-text{
 	max-width: 500px;
 	max-height: 500px;
@@ -190,6 +188,7 @@ body{
 	font-size: 18px;		
 	text-align: justify;
 }
+
 .footer{
 	width: 100%;
 	height: 80px;
@@ -203,6 +202,7 @@ body{
 	justify-content: center;
 	align-items: center;
 }
+
 .footer .social-networks{
 	display: flex;
 	justify-content:center;
@@ -210,9 +210,35 @@ body{
 	list-style-type: none;
 	margin: 4px 0 4px 0;
 }
+
 .footer .social-networks .social-item{
 	margin: 0 4px 0 4px;
 }
+
 .footer .footer-item{
 	margin: 2px 0;
+}
+
+@media(max-width: 920px){
+
+.navbar{
+	height: 42px;
+}
+
+.navbar .navbar-logo{	
+	width: 69px;
+	height: 20px;
+}
+
+.navbar .navbar-logo:hover{
+	width: 80px;	
+}
+.navbar .navbar-list .navbar-item a{
+	font-size: 8px;
+	line-height: 10px;
+}
+.navbar .navbar-list .navbar-item a:hover{
+	font-size: 20px;
+	transition: font-size 1s;
+}
 }
