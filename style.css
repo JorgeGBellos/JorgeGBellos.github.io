@@ -18,6 +18,7 @@
 body{
 	font-family: var(--primary-font);
 	color: white;
+	position: relative;
 }
 
 .header{
@@ -39,7 +40,7 @@ body{
 	box-shadow: var(--shadow);
 	position: fixed;
 	width: 100%;
-	height: 4.167vw;
+	height: 65px;
 	left: 0px;
 	top: 0px;
 	display: flex;
@@ -49,16 +50,9 @@ body{
 }
 
 .navbar .navbar-logo{
-	margin-left: 2.5vw;
-	width: 6.719vw;
-	height: 1.979vw;
-}
-
-.navbar .navbar-logo:hover{
-	width: 8.333vw;
-	height: auto;
-	transition: width 1s;
-	cursor: pointer;	
+	margin-left: 48px;
+	width: 129px;
+	height: 38px;
 }
 
 .navbar .navbar-list{
@@ -66,16 +60,16 @@ body{
 	list-style-type: none;
 }
 .navbar .navbar-list .navbar-item a{
-	margin-right: 2.5vw;
-	font-size: 0.833vw;
-	line-height: 1.042vw;
+	margin-right: 48px;
+	font-size: 16px;
+	line-height: 20px;
 	font-weight: bold;
 	text-decoration: none;
 	color: white;
 }
-.navbar .navbar-list .navbar-item a:hover{
-	font-size: 1.042vw;
-	transition: font-size 1s;
+
+.menu{
+	display: none;
 }
 
 .overlay{
@@ -97,32 +91,32 @@ body{
 	z-index: 1;
 }
 .hero-content .hero-banner-text{
-	max-width: 41.667vw;
+	max-width: 800px;
 	text-align: center;
 }
 
 .hero-content .hero-banner-text h1{
 	font-family: var(--secondary-font);
 	font-weight: bold;
-	font-size: 4.167vw;
-	margin-bottom: 0.833vw;
+	font-size: 80px;
+	margin-bottom: 1rem;
 }
 
 .hero-content .hero-banner-text > p{
 	font-weight: 300;
-	font-size: 1.250vw;
-	margin-bottom: 1.667vw;
+	font-size: 24px;
+	margin-bottom: 32px;
 }
 .hero-content .hero-banner-text .button{
-	width: 10.833vw;
-	height: 3.802vw;
+	width: 208px;
+	height: 73px;
 	margin: 0 auto;
  	text-decoration: none;
  	color: white;
  	background: rgba(255, 255, 255, 0.08);
- 	border: 0.104vw solid #FFFFFF;
+ 	border: 2px solid #FFFFFF;
  	text-align: center;
-	border-radius: 2.604vw;
+	border-radius: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -130,7 +124,7 @@ body{
 
 .hero-content .hero-banner-text .button p{
 	font-weight: normal;
-	font-size: 0.938vw;
+	font-size: 18px;
 }
 
 .about-us{
@@ -141,9 +135,7 @@ body{
 	position: relative;
 	z-index: -2;
 }
-.about-us. .about-us-content{
-	position: relative;
-}
+
 .about-us .about-us-content h4{
 	font-family: Montserrat;
 	font-size: 36px;
@@ -190,17 +182,24 @@ body{
 }
 
 .footer{
+	font-size: 12px;
 	width: 100%;
-	height: 80px;
-	position: fixed;
+	height: 65px;
+	position: absolute;
 	bottom:0;
 	left: 0;
 	background-color: var(--dark-blue);
-	z-index: -1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.footer p{
+	max-width: 200px;
+	text-align: center;
+	line-height: 15px;
+	margin-top: 10px;
 }
 
 .footer .social-networks{
@@ -208,16 +207,17 @@ body{
 	justify-content:center;
 	align-items: center;
 	list-style-type: none;
-	margin: 4px 0 4px 0;
+	margin-bottom: 10px;
 }
 
-.footer .social-networks .social-item{
-	margin: 0 4px 0 4px;
+.footer .social-item{
+	margin: 0 8px;
+}
+.footer .social-item i{
+	width: 10px;
+	height: 10px;
 }
 
-.footer .footer-item{
-	margin: 2px 0;
-}
 
 @media(max-width: 920px){
 
@@ -230,15 +230,76 @@ body{
 	height: 20px;
 }
 
-.navbar .navbar-logo:hover{
-	width: 80px;	
-}
 .navbar .navbar-list .navbar-item a{
 	font-size: 8px;
 	line-height: 10px;
 }
-.navbar .navbar-list .navbar-item a:hover{
-	font-size: 20px;
-	transition: font-size 1s;
+
+.footer{
+	font-size: 8px;
+	height: 42px;
 }
+
+.footer p{
+	max-width: 132px;
+	line-height: 10px;
+	margin-top: 4px;
+}
+
+.footer .social-networks{
+	margin-bottom: 4px;
+}
+
+.footer .social-item{
+	margin: 0 9px;
+}
+
+}
+
+@media(max-width: 730px){
+
+.navbar{
+	background: transparent;
+	box-shadow: none;
+	height: 20px;
+	left: 16px;
+	top: 16px;
+}
+
+.navbar .navbar-logo{
+	margin:0;
+	width: 69px;
+	height: 20px;
+}
+
+.navbar .navbar-list{
+	display: none;
+}
+
+.menu{
+	display:block;
+	position: absolute;
+	right: 32px;
+	width: 32px;
+	height: auto;
+}
+
+.footer{
+	font-size: 6px;
+	height: 36px;
+}
+
+.footer p{
+	max-width: 100px;
+	line-height: 7px;
+}
+
+.footer .social-networks{
+	margin-bottom: 4px;
+}
+
+.footer .social-item{
+	margin: 0 4px;
+}
+
 }
