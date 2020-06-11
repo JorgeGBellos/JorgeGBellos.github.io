@@ -25,7 +25,7 @@ body{
 	position: relative;
 	justify-content: center;
 	background: var(--light-black);
-	min-height: 1130px;
+	min-height: 1124px;
 	height: 100vh;
 	width: 100%;
 }
