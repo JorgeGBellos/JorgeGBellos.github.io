@@ -19,6 +19,8 @@ body{
 	font-family: var(--primary-font);
 	color: white;
 	position: relative;
+	min-width: 425px;
+	min-height: 300px;
 }
 
 .header{
@@ -235,6 +237,73 @@ body{
 	line-height: 10px;
 }
 
+.hero-content .hero-banner-text{
+	max-width: 400px;
+}
+
+.hero-content .hero-banner-text h1{
+	font-size: 40px;
+	line-height: 49px;
+}
+
+.hero-content .hero-banner-text > p{
+	font-size: 12px;
+	line-height: 15px;
+	margin-bottom: 36px;
+}
+.hero-content .hero-banner-text .button{
+	width: 111px;
+	height: 39px;
+}
+
+.hero-content .hero-banner-text .button p{
+	font-size: 10px;
+}
+
+.about-us .about-us-content h4{
+	font-size: 18px;
+	line-height: 22px;
+	padding-top: 3rem;
+}
+.about-us .about-us-content > p{
+	font-style: italic;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 15px;	
+}
+.about-us-content .line{
+	display: block;
+	width: 192px;
+	height: 0px;
+	border: 1px solid white;
+}
+
+.line-1{
+	position: absolute;
+	top: 55px;
+	right: 70px;
+}
+
+.line-2{
+	position: absolute;
+	top: 55px;
+	left: 70px;
+}
+
+.content{
+	margin-top: 16px;
+}
+
+.content .about-us-img{
+	display: none;
+}
+
+.content .about-us-text{
+	font-size: 16px;
+	line-height: 20px;
+}
+
 .footer{
 	font-size: 8px;
 	height: 42px;
@@ -282,6 +351,38 @@ body{
 	right: 32px;
 	width: 32px;
 	height: auto;
+}
+
+.hero-content .hero-banner-text{
+	max-width: 400px;
+}
+
+.hero-content .hero-banner-text h1{
+	font-size: 32px;
+	margin-bottom: 67px;
+}
+
+.hero-content .hero-banner-text > p{
+	display: none;
+}
+.hero-content .hero-banner-text .button{
+	width: 111px;
+	height: 40px;
+}
+
+.hero-content .hero-banner-text .button p{
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.about-us-content .line{
+	width: 20%;
+}
+
+.content .about-us-text{
+	margin-top: 14px;
+	margin-left: 70px;
+	margin-right: 70px;
 }
 
 .footer{
