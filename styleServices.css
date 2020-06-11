@@ -1,0 +1,337 @@
+:root{
+    --dark-blue:rgba(30, 48, 89, 0.8);
+	--light-black: rgba(0, 0, 0, 0.9);
+	--shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+	--hero-overlay:rgba(30, 48, 89, 0.4);
+	--primary-font:'Montserrat', sans-serif;
+	--secondary-font:'Montserrat Alternates', sans-serif;
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: var(--light-black);
+    color: white;
+    font-family: var(--primary-font);
+}
+
+.navbar{
+	background: var(--dark-blue);
+	box-shadow: var(--shadow);
+	position: fixed;
+	width: 100%;
+	height: 65px;
+	left: 0px;
+	top: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 2;
+}
+
+.navbar .navbar-logo{
+	margin-left: 48px;
+	width: 129px;
+	height: 38px;
+}
+
+.navbar .navbar-list{
+	display: flex;
+	list-style-type: none;
+}
+.navbar .navbar-list .navbar-item a{
+	margin-right: 48px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+
+.menu{
+	display: none;
+}
+
+.services-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 72px 0px 72px;
+    margin-bottom: 64px;
+    margin-top: 65px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 330px;
+    height: 530px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.flip-card h1{
+    margin-bottom: 8px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back, .about-services h1{
+    font-family: var(--secondary-font);
+    font-size: 24px;
+}
+  
+.flip-card-front, .flip-card-back, .about-services p{
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 100;
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    background-image: url("img/card-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flip-card-front{
+    padding: 116px 16px 16px 16px;
+}
+
+.flip-card-front img{
+    height: 150px;
+    width: auto;
+    margin-bottom: 40px;
+}
+  
+.flip-card-back{
+    transform: rotateY(180deg);
+    justify-content: center;
+    padding: 92px 16px 16px 16px;
+}
+
+.about-services{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 64px;
+}
+
+.about-services h1{
+    margin-bottom: 16px;
+}
+
+.about-services p{
+    max-width: 800px;
+}
+
+.footer{
+	font-size: 12px;
+	width: 100%;
+	height: 65px;
+	position: relative;
+	bottom:0;
+	left: 0;
+	background-color: var(--dark-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+	max-width: 200px;
+	text-align: center;
+	line-height: 15px;
+	margin-top: 10px;
+}
+
+.footer .social-networks{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+.footer .social-item{
+	margin: 0 8px;
+}
+.footer .social-item i{
+	width: 10px;
+	height: 10px;
+}
+
+@media(max-width: 920px){
+
+    .navbar{
+        height: 42px;
+    }
+    
+    .navbar .navbar-logo{	
+        width: 69px;
+        height: 20px;
+    }
+    
+    .navbar .navbar-list .navbar-item a{
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .services-cards{
+        padding: 0px 24px 0px 24px;
+        margin-bottom: 32px;
+        margin-top: 42px;
+    }
+    
+    
+    .flip-card {
+        width: 220px;
+        height: 355px;
+    }
+    
+    .flip-card h1{
+        margin-bottom: 8px;
+    }
+    
+    
+    .flip-card-front, .flip-card-back, .about-services h1{
+        font-family: var(--secondary-font);
+        font-size: 18px;
+    }
+      
+    .flip-card-front, .flip-card-back, .about-services p{
+        font-family: var(--primary-font);
+        font-size: 12px;
+        font-weight: 100;
+    }
+    
+    .flip-card-front{
+        padding: 82px 10px 10px 10px;
+    }
+    
+    .flip-card-front img{
+        height: 80px;
+        margin-bottom: 24px;
+    }
+      
+    .flip-card-back{
+        padding: 92px 16px 16px 16px;
+    }
+    
+    .about-services{
+        margin-bottom: 32px;
+    }
+    
+    .about-services h1{
+        margin-bottom: 12px;
+    }
+    
+    .about-services p{
+        max-width: 500px;
+    }
+
+    .footer{
+        font-size: 8px;
+        height: 42px;
+    }
+    
+    .footer p{
+        max-width: 132px;
+        line-height: 10px;
+        margin-top: 4px;
+    }
+    
+    .footer .social-networks{
+        margin-bottom: 4px;
+    }
+    
+    .footer .social-item{
+        margin: 0 9px;
+    }
+    
+}
+
+@media(max-width: 730px){
+
+    .navbar{
+        background: transparent;
+        box-shadow: none;
+        height: 20px;
+        left: 16px;
+        top: 16px;
+    }
+    
+    .navbar .navbar-logo{
+        margin:0;
+        width: 69px;
+        height: 20px;
+    }
+    
+    .navbar .navbar-list{
+        display: none;
+    }
+    
+    .menu{
+        display:block;
+        position: absolute;
+        right: 32px;
+        width: 32px;
+        height: auto;
+    }
+
+    .services-cards{
+        flex-direction: column;
+    }
+
+    .about-services p{
+        max-width: 380px;
+    }
+
+    .footer{
+        font-size: 6px;
+        height: 36px;
+    }
+    
+    .footer p{
+        max-width: 100px;
+        line-height: 7px;
+    }
+    
+    .footer .social-networks{
+        margin-bottom: 4px;
+    }
+    
+    .footer .social-item{
+        margin: 0 4px;
+    }
+    
+}
